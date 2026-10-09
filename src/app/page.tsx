@@ -1,9 +1,11 @@
-import React from 'react';
+import Hero from '@/components/Hero';
 
 const HomePage = () => {
   return (
     <div>
-      <h1></h1>
+      <main>
+        <Hero></Hero>
+      </main>
     </div>
   );
 };
