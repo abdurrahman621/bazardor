@@ -1,4 +1,5 @@
-import ProductCard from "@/components/ProductCard";
+// import ProductCard from "@/components/ProductCard";
+import CategoryProducts from "@/components/CategoryProducts";
 import productApi from "@/lib/api";
 import type { Product } from "@/types/product";
 import Link from "next/link";
@@ -54,19 +55,7 @@ const CategoryPage = async ({ params }: CategoryPageProps) => {
         </p>
       </div>
 
-      {products.length > 0 ? (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      ) : (
-        <div className="rounded-2xl border border-gray-200 bg-white p-8 text-center">
-          <p className="text-gray-600">
-            এই ক্যাটাগরিতে কোনো পণ্য পাওয়া যায়নি।
-          </p>
-        </div>
-      )}
+     <CategoryProducts products={products} />
     </main>
   );
 };
