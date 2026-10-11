@@ -21,11 +21,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const isUp = product.change.dir === "up";
   const isDown = product.change.dir === "down";
 
-  const trendColor = isUp
+
+const trendColor = isUp
+  ? "bg-emerald-50 text-emerald-700"
+  : isDown
     ? "bg-red-50 text-red-600"
-    : isDown
-      ? "bg-emerald-50 text-emerald-700"
-      : "bg-gray-100 text-gray-600";
+    : "bg-gray-100 text-gray-600";
 
   const arrow = isUp ? "▲" : isDown ? "▼" : "—";
 

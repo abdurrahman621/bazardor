@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import AuthButtons from "./AuthButtons";
 
 
 const categories = [
@@ -35,24 +36,16 @@ const Navbar = () => {
 
                         </span>
                         <span>
-                            <span className="block text-xl font-extrabold text-emerald-900 sm:text-2xl">
+                            <span className="block text-xl font-extrabold text-black sm:text-2xl">
                                 বাজার দর
                             </span>
-                            <span className="block text-xs text-gray-500">
+                            <span className="block text-xs text-black">
                                 {today}
                             </span>
                         </span>
                     </Link>
 
-                    <div className="flex items-center gap-2 ">
-                        <Link href="/signin" className="rounded-lg border border-emerald-700 px-3 text-sm font-semibold text-emerald-800 transition hover:bg-emerald-50 sm:px-4">
-                            সাইন ইন
-                        </Link>
-                        <Link href="/signup" className="rounded-lg bg-emerald-700 px-3 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800 sm:px-4">
-                            সাইন আপ
-                        </Link>
-
-                    </div>
+                <AuthButtons></AuthButtons>
 
                 </div>
 

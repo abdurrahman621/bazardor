@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import ProductCard from "@/components/ProductCard";
 import type { Product } from "@/types/product";
+import Link from "next/link";
 
 interface CategoryProductsProps {
   products: Product[];
@@ -62,11 +63,24 @@ const CategoryProducts = ({ products }: CategoryProductsProps) => {
           ))}
         </div>
       ) : (
-        <div className="rounded-2xl border border-gray-200 bg-white p-8 text-center">
-          <p className="text-gray-600">
-            এই ক্যাটাগরিতে কোনো পণ্য পাওয়া যায়নি।
-          </p>
-        </div>
+        
+<div className="rounded-2xl border border-gray-200 bg-white p-8 text-center">
+  <p className="text-lg font-semibold text-gray-800">
+    এই ক্যাটাগরিতে কোনো পণ্য পাওয়া যায়নি।
+  </p>
+
+  <p className="mt-2 text-sm text-gray-500">
+    অন্য ক্যাটাগরি থেকে পণ্য খুঁজে দেখতে পারো।
+  </p>
+
+  <Link
+    href="/"
+    className="mt-5 inline-block rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-700"
+  >
+    হোম পেজে ফিরে যাও
+  </Link>
+</div>
+
       )}
     </div>
   );

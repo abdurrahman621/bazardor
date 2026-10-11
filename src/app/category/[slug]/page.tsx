@@ -11,7 +11,7 @@ interface CategoryPageProps {
 
 const categoryNames: Record<string, string> = {
   chal: "চাল",
-  dal: "ডাল",
+  dal: " ডাল",
   tel: "তেল",
   sobji: "সবজি",
   mach: "মাছ",
@@ -55,7 +55,7 @@ const CategoryPage = async ({ params }: CategoryPageProps) => {
         </p>
       </div>
 
-     <CategoryProducts products={products} />
+      <CategoryProducts products={products} />
     </main>
   );
 };

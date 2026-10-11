@@ -15,7 +15,7 @@ const AllProducts = ({ products }: AllProductsProps) => {
                 </h2>
 
                 <p className="mt-1 text-sm text-[#758078]">
-                    মোট ৩৩টি পণ্য দেখানো হচ্ছে
+                    মোট {products.length.toLocaleString("bn-BD")} টি পণ্য দেখানো হচ্ছে
                 </p>
             </div>
 

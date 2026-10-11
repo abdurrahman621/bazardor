@@ -12,10 +12,11 @@ const PriceSection = ({
   products,
   trend,
 }: PriceSectionProps) => {
-  const filteredProducts = products
-    .filter((product) => product.change.dir === trend)
-    .slice(0, 6);
-
+  
+const filteredProducts = products
+  .filter((product) => product.change.dir === trend)
+  .sort((a, b) => Math.abs(b.change.pct) - Math.abs(a.change.pct))
+  .slice(0, 6);
   const isUp = trend === "up";
 
   return (
